@@ -3,9 +3,6 @@
   "version": "0.0.1",
   "description": "A library for interacting with GSM/GPRS module. Based on sim900js.",
   "main": "gsm.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Acenth/gsmjs.git"

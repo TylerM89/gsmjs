@@ -267,6 +267,7 @@ GSM.prototype.request = function(url, options, cb) {
     var method = options && options['method'] ? options['method'] : 0;
     var contentType = options && options['contentType'] ? options['contentType'] : 'text/plain';
     var data = options && options['data'] ? options['data'] : null;
+    var timeout = options && options['timeout'] ? options['timeout'] : 15000;
     
     var commands = [];
     
@@ -287,7 +288,7 @@ GSM.prototype.request = function(url, options, cb) {
         commands.push([data+String.fromCharCode(parseInt("1A", 16)), 5000]);
     }
     
-    commands.push(['AT+HTTPACTION=' + method, 15000]);
+    commands.push(['AT+HTTPACTION=' + method, timeout]);
     
     this._httpInit(function(err, resp, raw){
         that._writeCommandSequence(commands, 1000, function(err, resp, raw) {
