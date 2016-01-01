@@ -1,5 +1,5 @@
 // Original Author: Mike Reich (https://github.com/sensamo/sim900js)
-// Contributor: Tyler McDowall (Acenth)
+// Tyler McDowall (Acenth)
 
 var mraa = require('mraa');
 var sp = require('serialport');
