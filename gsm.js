@@ -19,9 +19,9 @@ var GSM = function(port, baud) {
     
     this._clear();
     
-    var SerialPort = sp.SerialPort;
-    this._sp = new SerialPort(port, {
-        baudrate: baud
+    this._sp = new sp(port, {
+        baudrate: baud,
+        autoOpen:false
     }); 
 };
 
